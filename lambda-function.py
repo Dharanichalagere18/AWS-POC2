@@ -27,7 +27,7 @@ def lambda_handler(event, context):
             files = [obj['Key'] for obj in response.get('Contents', [])]
             
             return {
-                'body': json.dumps({
+                'data': json.dumps({
                     'files': files
                 })
             }
